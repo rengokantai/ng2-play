@@ -54,13 +54,13 @@ gulp.task('angular2', function () {
 
   var buildConfig = {
     paths: {
-      "angular2/*": "node_modules/angular2/es6/prod/*.es6",
+      "angular2/*": "node_modules/angular2/es6/prod/*.js",
       "rx": "node_modules/angular2/node_modules/rx/dist/rx.js"
     },
     meta: {
-      // auto-detection fails to detect properly here - https://github.com/systemjs/builder/issues/123
+      // auto-detection fails to detect properly
       'rx': {
-        format: 'cjs'
+        format: 'cjs' //https://github.com/systemjs/builder/issues/123
       }
     }
   };
